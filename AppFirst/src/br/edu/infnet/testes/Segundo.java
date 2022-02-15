@@ -34,8 +34,7 @@ public class Segundo {
 		return salarios[indice] + bonus[indice] - descontos[indice];
 	}	
 	
-	private static String obterSituacao(float sl){
-		
+	private static String obterSituacao(float sl){		
 		return sl >= 100000 ? "rico" : "pobre";
 	}
 
