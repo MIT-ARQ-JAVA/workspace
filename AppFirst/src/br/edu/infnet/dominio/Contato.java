@@ -4,6 +4,11 @@ public class Contato {
 	private String email;
 	private String telefone;
 	
+	@Override
+	public String toString() {
+		return String.format("%s;%s", email, telefone);
+	}
+	
 	public String getEmail() {
 		return email;
 	}

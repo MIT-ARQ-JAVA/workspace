@@ -1,4 +1,4 @@
-package br.edu.infnet.testes;
+package br.edu.infnet.exemplos;
 
 public class Primeiro {
 	

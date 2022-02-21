@@ -1,4 +1,4 @@
-package br.edu.infnet.testes;
+package br.edu.infnet.exemplos;
 
 import java.util.Scanner;
 
