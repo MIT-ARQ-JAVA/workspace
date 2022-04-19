@@ -13,7 +13,6 @@
 
 	<div class="container">
 		<h4>AppPedido: sistema para gestão de pedidos</h4>
-	  	<p>Olá!!</p>
 	</div>
 </body>
 </html>

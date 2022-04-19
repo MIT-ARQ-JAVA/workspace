@@ -14,7 +14,6 @@ public class Bebida extends Produto {
 	public Bebida() {
 		// TODO Auto-generated constructor stub
 	}
-
 	public Bebida(String nome, float valor, int codigo) {
 		super(nome, valor, codigo);
 	}

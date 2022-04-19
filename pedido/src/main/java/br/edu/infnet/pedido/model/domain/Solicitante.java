@@ -25,7 +25,6 @@ public class Solicitante {
 	public Solicitante() {
 		// TODO Auto-generated constructor stub
 	}
-	
 	public Solicitante(String nome, String cpf, String email) {
 		this.nome = nome;
 		this.cpf= cpf;
@@ -85,5 +84,4 @@ public class Solicitante {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-
 }

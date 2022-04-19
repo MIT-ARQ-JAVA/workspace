@@ -9,7 +9,6 @@
 </head>
 <body>
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
-	
 	<div class="container mt-3">
 	  <h2>Cadastramento de Bebidas</h2>
 	  <form action="/bebida" method="get">

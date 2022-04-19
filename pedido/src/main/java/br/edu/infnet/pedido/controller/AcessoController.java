@@ -3,6 +3,7 @@ package br.edu.infnet.pedido.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +31,7 @@ public class AcessoController {
 	public String telaLogin() {
 		return "login";
 	}
-	
+
 	@GetMapping(value = "/logout")
 	public String logout(HttpSession session, SessionStatus status) {
 		
@@ -48,7 +49,7 @@ public class AcessoController {
 		
 		if(usuario != null) {
 			model.addAttribute("usuarioLogado", usuario);
-			
+
 			return "index";
 		}
 		

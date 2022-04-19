@@ -12,7 +12,7 @@ import br.edu.infnet.pedido.model.repository.BebidaRepository;
 
 @Service
 public class BebidaService {
-	
+
 	@Autowired
 	private BebidaRepository bebidaRepository;
 	
