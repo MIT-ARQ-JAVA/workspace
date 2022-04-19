@@ -2,6 +2,7 @@ package br.edu.infnet.pedido.model.domain;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,12 +22,15 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private boolean admin;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idUsuario")
 	private List<Solicitante> solicitantes;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idUsuario")
 	private List<Produto> produtos;
+	@OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+	@JoinColumn(name = "idUsuario")
+	private List<Pedido> pedidos;
 	
 	public Integer getId() {
 		return id;
@@ -69,5 +73,11 @@ public class Usuario {
 	}
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
+	}
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
 	}
 }

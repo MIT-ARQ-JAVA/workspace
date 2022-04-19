@@ -11,23 +11,18 @@
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 	
 	<div class="container mt-3">
-	  <h2>Cadastramento de Usuários</h2>
+	  <h2>Cadastramento de Produtos</h2>
 
 	  <c:if test="${not empty listagem}">
-	 	  <p>Listagem de usuários (${listagem.size()}):</p>            
+	 	  <p>Listagem de produtos (${listagem.size()}):</p>            
 		  <table class="table table-striped">
 		    <thead>
 		      <tr>
 		        <th>ID</th>
 		        <th>Nome</th>
-		        <th>E-mail</th>
-		        <th>Solicitantes</th>
-		        <th>Produtos</th>
-		        <th>Pedidos</th>
-		        <c:if test="${usuarioLogado.admin}">
-		        	<th></th>
-		        </c:if>
-		        
+		        <th>Valor</th>
+		        <th>Código</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -35,13 +30,9 @@
 			      <tr>
 			      	<td>${o.id}</td>
 			        <td>${o.nome}</td>
-			        <td>${o.email}</td>
-			        <td>${o.solicitantes.size()}</td>
-			        <td>${o.produtos.size()}</td>			        
-			        <td>${o.pedidos.size()}</td>
-			        <c:if test="${usuarioLogado.admin}">
-			        	<td><a href="/usuario/${o.id}/excluir">excluir</a></td>			        
-			        </c:if>
+			        <td>${o.valor}</td>
+			        <td>${o.codigo}</td>
+			        <td><a href="/produto/${o.id}/excluir">excluir</a></td>
 			      </tr>
 		      </c:forEach>
 		    </tbody>
